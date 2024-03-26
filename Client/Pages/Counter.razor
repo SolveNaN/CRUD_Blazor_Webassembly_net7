@@ -1,0 +1,65 @@
+﻿@page "/counter"
+@using FinanzasPersonalesProyect.Shared
+@inject HttpClient Http
+<PageTitle>Counter</PageTitle>
+
+<h1>Usuarios</h1>
+
+<p>Tabla general de usuarios.</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var usuario in Listado)
+        {
+            <tr>
+                <td>@usuario.Nombre </td>
+                <td>@usuario.Correo</td>
+            </tr>
+        }
+
+        
+    </tbody>
+</table>
+<br />
+<label>Nombre</label>
+<input type="text" @bind-value=usuario.Nombre />
+<label>Correo</label>
+<input type="text" @bind-value=usuario.Correo />
+
+
+<button class="btn btn-primary" @onclick=CrearUsuario>Crear Usuario</button>
+<br />
+<label>@Respuesta</label>
+
+
+@code {
+    string Respuesta = "Procesando...";
+    Usuario usuario = new Usuario();
+
+    public static List<Usuario> Listado = new List<Usuario>();
+    async Task CrearUsuario()
+    {
+        var respuesta = await Http.PostAsJsonAsync("api/Usuario/NuevoUsuario", usuario);
+
+        Respuesta = await respuesta.Content.ReadAsStringAsync();
+        await Actualizar();
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        await Actualizar();
+    }
+
+
+    async Task Actualizar()
+    {
+        var usuarios = await Http.GetFromJsonAsync<List<Usuario>>("api/Usuario/ObtenerUsuarios");
+        Listado = usuarios;
+    }
+}

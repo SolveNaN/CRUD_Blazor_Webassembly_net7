@@ -1,0 +1,119 @@
+﻿@page "/fetchdata"
+@using FinanzasPersonalesProyect.Shared
+@inject HttpClient Http
+
+<PageTitle>Weather forecast</PageTitle>
+
+<h1>Movimientos</h1>
+
+<p>Movimientos de ingresos y egresos </p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Nombre</th>
+
+            <th scope="col">Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var movimiento in Movimientos)
+        {
+            <tr>
+                <th scope="row">@movimiento.Id</th>
+                <td>@movimiento.Fecha</td>
+                <td>@movimiento.Descripcion</td>
+                <td>@movimiento.Cantidad</td>
+                <td>@movimiento.Tipo</td>
+                <td>@movimiento.Usuario.Nombre </td>
+
+                <td>
+                    <button class="btn btn-success" @onclick="(()=>Asignar(movimiento))">Editar</button>
+                    <button class="btn btn-warning" @onclick="(()=>EliminarMovimiento(movimiento.Id))">Eliminar</button>
+                </td>
+            </tr>
+        }
+        
+    </tbody>
+</table>
+<br />
+<h3>Nuevo Movimiento</h3>
+
+
+<label>Usuario</label>
+<EditForm Model="@movimiento">
+    <InputSelect class="form-control" @bind-Value="@movimiento.UsuarioId">
+        <option selected value=0>Elegir Usuario</option>
+        @foreach (var usuario in Listado)
+        {
+            <option value="@usuario.Id">@usuario.Nombre</option>
+        }
+    </InputSelect>
+</EditForm>
+<label>Contidad</label>
+<input class="form-control" type="number" @bind-value=movimiento.Cantidad />
+<label>Tipo</label>
+<select class="form-control" @bind="movimiento.Tipo">
+    <option selected value="Ingreso">Ingreso</option>
+    <option selected value="Egreso">Egreso</option>
+</select>
+<label>Descripcion</label>
+
+<input type="text" class="form-control" @bind-value=movimiento.Descripcion />
+<br />
+
+<button class="btn btn-primary" @onclick="CrearNuevoMovimiento">Guardar Nuevo</button>
+<button class="btn btn-primary" @onclick="Editar">Guardar Edicion</button>
+<label>@respuestaGuardado</label>
+@code {
+    Movimiento movimiento = new Movimiento();
+    string respuestaGuardado = "Procesando...";
+    public static List<Usuario> Listado = new List<Usuario>();
+    public static List<Movimiento> Movimientos = new List<Movimiento>();
+    protected override async Task OnInitializedAsync()
+    {
+        await Actualizar();
+    }
+
+    async Task Actualizar()
+    {
+        var usuarios = await Http.GetFromJsonAsync<List<Usuario>>("api/Usuario/ObtenerUsuarios");
+        Listado = usuarios;
+
+        var movimientos = await Http.GetFromJsonAsync<List<Movimiento>>("api/Movimiento/ObtenerMovimientos");
+        Movimientos = movimientos;
+
+
+    }
+
+    async Task CrearNuevoMovimiento()
+    {
+        movimiento.Id = 0;
+        var respuesta = await Http.PostAsJsonAsync("api/Movimiento/NuevoMovimiento", movimiento);
+        respuestaGuardado = await respuesta.Content.ReadAsStringAsync();
+        await Actualizar();
+    }
+
+    async Task EliminarMovimiento(int id)
+    {
+        var respuesta = await Http.DeleteAsync($"api/Movimiento/{id}");
+        await Actualizar();
+    }
+
+    async Task Asignar(Movimiento mimovimiento)
+    {
+        movimiento = mimovimiento;
+    }
+
+    async Task Editar()
+    {
+        var respuesta = await Http.PutAsJsonAsync($"api/Movimiento/{movimiento.Id}", movimiento);
+        await Actualizar();
+    }
+
+}

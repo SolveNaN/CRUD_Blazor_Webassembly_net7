@@ -1,0 +1,11 @@
+C:\Users\Dagoberto\Documents\CursoBlazorWebAppDotnet8\Proyecs\FinanzasPersonalesProyect\Shared\bin\Debug\net7.0\FinanzasPersonalesProyect.Shared.deps.json
+C:\Users\Dagoberto\Documents\CursoBlazorWebAppDotnet8\Proyecs\FinanzasPersonalesProyect\Shared\bin\Debug\net7.0\FinanzasPersonalesProyect.Shared.dll
+C:\Users\Dagoberto\Documents\CursoBlazorWebAppDotnet8\Proyecs\FinanzasPersonalesProyect\Shared\bin\Debug\net7.0\FinanzasPersonalesProyect.Shared.pdb
+C:\Users\Dagoberto\Documents\CursoBlazorWebAppDotnet8\Proyecs\FinanzasPersonalesProyect\Shared\obj\Debug\net7.0\FinanzasPersonalesProyect.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dagoberto\Documents\CursoBlazorWebAppDotnet8\Proyecs\FinanzasPersonalesProyect\Shared\obj\Debug\net7.0\FinanzasPersonalesProyect.Shared.AssemblyInfoInputs.cache
+C:\Users\Dagoberto\Documents\CursoBlazorWebAppDotnet8\Proyecs\FinanzasPersonalesProyect\Shared\obj\Debug\net7.0\FinanzasPersonalesProyect.Shared.AssemblyInfo.cs
+C:\Users\Dagoberto\Documents\CursoBlazorWebAppDotnet8\Proyecs\FinanzasPersonalesProyect\Shared\obj\Debug\net7.0\FinanzasPersonalesProyect.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Dagoberto\Documents\CursoBlazorWebAppDotnet8\Proyecs\FinanzasPersonalesProyect\Shared\obj\Debug\net7.0\FinanzasPersonalesProyect.Shared.dll
+C:\Users\Dagoberto\Documents\CursoBlazorWebAppDotnet8\Proyecs\FinanzasPersonalesProyect\Shared\obj\Debug\net7.0\refint\FinanzasPersonalesProyect.Shared.dll
+C:\Users\Dagoberto\Documents\CursoBlazorWebAppDotnet8\Proyecs\FinanzasPersonalesProyect\Shared\obj\Debug\net7.0\FinanzasPersonalesProyect.Shared.pdb
+C:\Users\Dagoberto\Documents\CursoBlazorWebAppDotnet8\Proyecs\FinanzasPersonalesProyect\Shared\obj\Debug\net7.0\ref\FinanzasPersonalesProyect.Shared.dll

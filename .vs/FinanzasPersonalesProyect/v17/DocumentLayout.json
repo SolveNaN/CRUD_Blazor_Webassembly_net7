@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dagoberto\\Documents\\CursoBlazorWebAppDotnet8\\Proyecs\\FinanzasPersonalesProyect\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{878E1592-FF8A-440C-A30A-BD4C71E66D6B}|Client\\FinanzasPersonalesProyect.Client.csproj|c:\\users\\dagoberto\\documents\\cursoblazorwebappdotnet8\\proyecs\\finanzaspersonalesproyect\\client\\pages\\fetchdata.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{878E1592-FF8A-440C-A30A-BD4C71E66D6B}|Client\\FinanzasPersonalesProyect.Client.csproj|solutionrelative:client\\pages\\fetchdata.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E8C2DC-BB21-4B1D-9234-C57514A36BE9}|Server\\FinanzasPersonalesProyect.Server.csproj|c:\\users\\dagoberto\\documents\\cursoblazorwebappdotnet8\\proyecs\\finanzaspersonalesproyect\\server\\controllers\\movimientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89E8C2DC-BB21-4B1D-9234-C57514A36BE9}|Server\\FinanzasPersonalesProyect.Server.csproj|solutionrelative:server\\controllers\\movimientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FetchData.razor",
+              "DocumentMoniker": "C:\\Users\\Dagoberto\\Documents\\CursoBlazorWebAppDotnet8\\Proyecs\\FinanzasPersonalesProyect\\Client\\Pages\\FetchData.razor",
+              "RelativeDocumentMoniker": "Client\\Pages\\FetchData.razor",
+              "ToolTip": "C:\\Users\\Dagoberto\\Documents\\CursoBlazorWebAppDotnet8\\Proyecs\\FinanzasPersonalesProyect\\Client\\Pages\\FetchData.razor",
+              "RelativeToolTip": "Client\\Pages\\FetchData.razor",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAAEkAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-25T23:34:25.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MovimientoController.cs",
+              "DocumentMoniker": "C:\\Users\\Dagoberto\\Documents\\CursoBlazorWebAppDotnet8\\Proyecs\\FinanzasPersonalesProyect\\Server\\Controllers\\MovimientoController.cs",
+              "RelativeDocumentMoniker": "Server\\Controllers\\MovimientoController.cs",
+              "ToolTip": "C:\\Users\\Dagoberto\\Documents\\CursoBlazorWebAppDotnet8\\Proyecs\\FinanzasPersonalesProyect\\Server\\Controllers\\MovimientoController.cs",
+              "RelativeToolTip": "Server\\Controllers\\MovimientoController.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAE0AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T23:33:47.982Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

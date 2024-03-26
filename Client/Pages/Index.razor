@@ -1,0 +1,28 @@
+﻿@page "/"
+@inject HttpClient Http
+<PageTitle>Index</PageTitle>
+
+<h1>FINANZAS PERSONALES</h1>
+
+Estado de la conexión actual
+<br />
+<br />
+<p>@ConexionServidor</p>
+<p>@ConexionBaseDatosUsuarios</p>
+<p>@ConexionBaseDatosMovimientos</p>
+
+@code{
+    string ConexionServidor="En Espera...";
+    string ConexionBaseDatosUsuarios = "Conectando con el la base de datos tabla Usuarios...";
+    string ConexionBaseDatosMovimientos = "Conectando con el la base de datos tabla Movimientos...";
+    protected override async Task OnInitializedAsync()
+    {
+        var respuesta = await Http.GetStringAsync("api/Usuario/ConexionServidor");
+        ConexionServidor = respuesta;
+        var respuestaUsuarios = await Http.GetStringAsync("api/Usuario/ConexionDB");
+        ConexionBaseDatosUsuarios = respuestaUsuarios;
+        var respuestaMovimientos = await Http.GetStringAsync("api/Movimiento/ConexionDB");
+        ConexionBaseDatosMovimientos = respuestaMovimientos;
+    }
+}
+
